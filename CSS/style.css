@@ -1,0 +1,15 @@
+/* Estilos globais */
+@import url("./global.css");
+@import url("./pre-header.css");
+@import url("./header.css");
+@import url("./formulario.css");
+@import url("./footer.css");
+
+/* Estilos Home */
+@import url("./HomePage/carrossel.css");
+@import url("./HomePage/especialidades.css");
+@import url("./HomePage/cursos-em-alta.css");
+@import url("./HomePage/diferenciais.css");
+
+/* Estidos Graduação */
+@import url("/CSS/GraduacaoPage/gintro.css");

@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+h1 {
+  color: #ff7323;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: "apotek", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  text-align: start;
+  margin-left: 80px;
+}
+
+.catalogo img {
+  max-width: 100%;
+}
+
+.catalogo {
+  position: relative;
+}
+
+.botoes-catalogo {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  position: absolute;
+  bottom: 5%; /* Posiciona os botões no topo */
+  left: 0; /* Alinha os botões à esquerda */
+  right: 5%; /* Alinha os botões à direita */
+}
+
+.catalogo button {
+  margin: 0 2%;
+  border-radius: 30px;
+  color: #fff;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #ff7323;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  width: 41%;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .catalogos-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 801px) {
+  h1 {
+    font-size: 30px;
+  }
+  .catalogos-mobile {
+    display: block;
+  }
+  .catalogos-desktop {
+    display: none;
+  }
+  .botoes-catalogo {
+    flex-direction: column; /* Altera a direção dos botões para uma coluna em telas menores */
+  }
+  .catalogo button:nth-child(1) {
+    margin-bottom: 80%; /* Espaçamento abaixo do botão de graduação */
+  }
+
+  .catalogo button:nth-child(2) {
+    margin-bottom: 85%; /* Mantém o botão de pós-graduação na mesma posição */
+  }
+
+  .catalogo button:nth-child(3) {
+    margin-bottom: 5%;
+  }
+
+  .catalogo button {
+    width: 100%; /* Largura de 100% para ocupar toda a largura disponível */
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}

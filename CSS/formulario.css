@@ -1,0 +1,219 @@
+.container-forms {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff7323;
+}
+.matricule-se-container {
+  grid-column: span 2;
+}
+
+.matricule-se-container h1 {
+  color: white;
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+
+.contato-dados h2 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.contato-dados p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.contato-dados,
+.contato-formulario {
+  padding: 60px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contato-dados {
+  border-radius: 13px 0 0 13px;
+  background: #a8a8a8;
+}
+
+.contato-formulario {
+  border-radius: 0 13px 13px 0;
+  background: #ffffff;
+}
+
+.contato-meios a {
+  display: block;
+  max-width: max-content;
+  margin-bottom: 8px;
+  padding-left: 28px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.contato-meios a:hover {
+  color: #ff7323;
+}
+
+.contato-meios a:first-child {
+  background: url("../img/email.svg") no-repeat 0px -1px;
+}
+
+.contato-meios a:nth-child(2) {
+  background: url("../img/telefone.svg") no-repeat 0px -1px;
+  margin-bottom: 60px;
+}
+
+.contato-redes {
+  display: flex;
+  gap: 32px;
+  padding-left: 28px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form label {
+  display: block;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.form .col-2 {
+  grid-column: span 2;
+}
+
+.form .col-2 select,
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #f7f7f7;
+  border: 1px solid #cccccc;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="tel"]:focus,
+.form textarea:focus,
+.form .col-2 select:focus {
+  outline: none;
+  border-color: #ff7323;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #fdc7a8;
+}
+
+.botao-form {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #ff7323;
+  border-radius: 14px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+.botao-form:hover {
+  background: linear-gradient(#ff7323, #f17c39);
+}
+
+.loading {
+  width: 35px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .contato {
+    grid-template-columns: 1fr;
+  }
+  .matricule-se-container {
+    grid-column: initial;
+  }
+  .contato-dados,
+  .contato-formulario {
+    padding: 20px;
+  }
+  .contato-dados {
+    border-radius: 13px 13px 0 0;
+  }
+  .contato-formulario {
+    border-radius: 0 0 13px 13px;
+  }
+  .contato-dados h2,
+  .contato-meios a:nth-child(2) {
+    margin-bottom: 32px;
+  }
+  .contato-redes {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .botao-form {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form .col-2 {
+    grid-column: 1;
+  }
+  .matricule-se-container h1 {
+    margin-bottom: 10px;
+  }
+  .contato-dados p {
+    font-size: 20px;
+  }
+  .contato-dados h2 {
+    font-size: 20px;
+  }
+  .contato-dados a {
+    font-size: 16px;
+  }
+}

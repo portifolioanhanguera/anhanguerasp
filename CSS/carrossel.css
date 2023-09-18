@@ -1,0 +1,51 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 500%; /* 5 slides em largura total */
+  transition: transform 1s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  width: 20%; /* Cada slide ocupa 20% da largura do contêiner (5 slides no total) */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -3px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Isso faz a imagem preencher o slide sem deformá-la */
+}
+@media (max-width: 400px) {
+  .carousel {
+    width: 100vw;
+    height: 105.47px;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: block;
+    transition: transform 1s ease-in-out;
+    white-space: nowrap; /* Impede que os slides quebrem para a próxima linha */
+  }
+
+  .carousel-slide {
+    width: 375px; /* Largura de cada slide */
+    height: 105.47px;
+    display: inline-block; /* Exibe os slides em linha */
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

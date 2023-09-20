@@ -25,38 +25,27 @@ h1 {
 
 .catalogo img {
   max-width: 100%;
-}
-
-.catalogo {
-  position: relative;
+  transition: transform 0.2s ease-in-out; /* Adiciona uma transição suave */
 }
 
 .botoes-catalogo {
   display: flex;
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  position: absolute;
-  bottom: 5%; /* Posiciona os botões no topo */
-  left: 0; /* Alinha os botões à esquerda */
-  right: 5%; /* Alinha os botões à direita */
+  justify-content: center;
+  align-items: center;
 }
 
-.catalogo button {
-  margin: 0 2%;
-  border-radius: 30px;
-  color: #fff;
-  font-family: "eigerdals", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  background-color: #ff7323;
-  border: none;
-  font-size: 20px;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  width: 41%;
+.botoes-catalogo a {
+  margin: 0;
   cursor: pointer;
 }
 
+/* Adiciona a transformação de escala no hover */
+.botoes-catalogo a:hover img {
+  transform: scale(1.05); /* Aumenta a imagem em 5% */
+}
+
 @media (min-width: 800px) {
-  .catalogos-mobile {
+  .botoes-catalogo-mobile {
     display: none;
   }
 }
@@ -65,29 +54,14 @@ h1 {
   h1 {
     font-size: 30px;
   }
-  .catalogos-mobile {
-    display: block;
-  }
-  .catalogos-desktop {
+  .botoes-catalogo {
     display: none;
   }
-  .botoes-catalogo {
-    flex-direction: column; /* Altera a direção dos botões para uma coluna em telas menores */
-  }
-  .catalogo button:nth-child(1) {
-    margin-bottom: 80%; /* Espaçamento abaixo do botão de graduação */
-  }
 
-  .catalogo button:nth-child(2) {
-    margin-bottom: 85%; /* Mantém o botão de pós-graduação na mesma posição */
-  }
-
-  .catalogo button:nth-child(3) {
-    margin-bottom: 5%;
-  }
-
-  .catalogo button {
-    width: 100%; /* Largura de 100% para ocupar toda a largura disponível */
+  .botoes-catalogo-mobile a {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
   }
 }
 

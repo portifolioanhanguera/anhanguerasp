@@ -1,0 +1,83 @@
+.titulo-pos {
+  color: #16375c;
+}
+
+.cursos-alta-p {
+  background-color: #16375c;
+}
+
+.cursos-alta-p h2 {
+  margin-bottom: 40px;
+  font-family: "apotek-comp", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  color: #ededed;
+}
+
+.cursos-alta-p ul {
+  margin: 0px;
+  padding: 0 20px 20px 20px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  justify-content: space-between;
+}
+
+.cursos-alta-p a {
+  display: block;
+  color: transparent;
+}
+
+.cursos-alta-p img {
+  margin-bottom: 0px;
+}
+
+.cursos-alta-p h2 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.cursos-alta-p h2::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: #fdb913;
+  transition: width 0.2s;
+}
+
+.cursos-alta-p a:hover h2::before {
+  width: 24px;
+}
+
+.cursos-alta-p li span {
+  padding-left: 20px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+.condicoes {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 90px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 801px) {
+  .cursos-alta-p {
+    padding-bottom: 30px;
+  }
+  .cursos-alta-p ul {
+    gap: 20px;
+  }
+}

@@ -1,5 +1,5 @@
 .section {
-  background-image: url("/img/Fundo-especialidade.png");
+  background-image: url("../../img/Fundo-especialidade.png");
   background-color: #ffffff;
   background-size: cover;
   background-position: center;
@@ -41,6 +41,12 @@
 .texto {
   flex: 1;
   text-align: left;
+}
+
+.cursos-up {
+  text-decoration: underline;
+  color: #16375c;
+  cursor: pointer;
 }
 
 @media (max-width: 801px) {

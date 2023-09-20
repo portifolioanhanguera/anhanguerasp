@@ -81,7 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nome, telefone, email, modalidade, curso, polo }),
+      body: JSON.stringify({
+        nome,
+        telefone,
+        email,
+        modalidade,
+        tipo,
+        curso,
+        polo,
+      }),
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
@@ -91,13 +99,154 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
+// JS fomulario Amigo Vale Pix
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nomealuno]").value = "";
+    document.querySelector("input[name=ra]").value = "";
+    document.querySelector("input[name=telefonealuno]").value = "";
+    document.querySelector("input[name=emailaluno]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomealuno = document.querySelector("input[name=nomealuno]").value;
+    const ra = document.querySelector("input[name=ra]").value;
+    const telefonealuno = document.querySelector(
+      "input[name=telefonealuno]"
+    ).value;
+    const emailaluno = document.querySelector("input[name=emailaluno]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomealuno,
+        ra,
+        telefonealuno,
+        emailaluno,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS fomulario Professor Vale Pix
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nomeprof]").value = "";
+    document.querySelector("input[name=telefoneprof]").value = "";
+    document.querySelector("input[name=emailprof]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomeprof = document.querySelector("input[name=nomeprof]").value;
+    const telefoneprof = document.querySelector(
+      "input[name=telefoneprof]"
+    ).value;
+    const emailprof = document.querySelector("input[name=emailprof]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomeprof,
+        telefoneprof,
+        emailprof,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS Formulario Domino's
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const parceria = document.querySelector("input[name=parceria]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+      }),
+    }).then(() => {
+      removeloading();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
 // Alerta de página em construção
+
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".header-links a");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    if (!event.target.classList.contains("excluir-alerta")) {
+      event.preventDefault();
+      alert("Desculpe o transtorno, essa página ainda está em construção");
+    }
   }
 
   links.forEach((link) => {
@@ -109,8 +258,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll("#nav li");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    const link = event.target;
+
+    if (link.tagName === "A") {
+      const href = link.getAttribute("href");
+
+      if (href !== "./graduacao.html" && href !== "./index.html") {
+        event.preventDefault();
+        alert("Desculpe o transtorno, essa página ainda está em construção");
+      }
+    }
   }
 
   menuItems.forEach((item) => {
@@ -120,26 +277,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const botaoParcerias = document.querySelector(".botao-1");
-
-  function mostrarAlerta() {
-    alert("Desculpe o transtorno, essa página ainda está em construção");
-  }
-
-  botaoParcerias.addEventListener("click", mostrarAlerta);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const linksInformacoes = document.querySelectorAll(
-    ".footer-informacoes li a"
-  );
+  const links = document.querySelectorAll(".footer-informacoes li a");
 
   function mostrarAlerta(event) {
-    event.preventDefault();
-    alert("Desculpe o transtorno, essa página ainda está em construção");
+    if (!event.target.classList.contains("excluir-alerta")) {
+      event.preventDefault();
+      alert("Desculpe o transtorno, essa página ainda está em construção");
+    }
   }
 
-  linksInformacoes.forEach((link) => {
+  links.forEach((link) => {
     link.addEventListener("click", mostrarAlerta);
   });
 });

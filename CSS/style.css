@@ -12,4 +12,19 @@
 @import url("./HomePage/diferenciais.css");
 
 /* Estidos Graduação */
-@import url("/CSS/GraduacaoPage/gintro.css");
+@import url("./GraduacaoPage/gintro.css");
+@import url("./GraduacaoPage/cursos-alta-g.css");
+@import url("./GraduacaoPage/forms-g.css");
+
+/* Estilos Pós Graduação */
+@import url("./PosPage/intropos.css");
+@import url("./PosPage/diferenciaspos.css");
+
+/* Estilos Amigo e Professor Vale Pix */
+@import url("./Parcerias/amigopix.css");
+
+/* Estilo Domino's */
+@import url("./Parcerias/dominos.css");
+
+/* Estilo Aport */
+@import url("./Parcerias/aport.css");

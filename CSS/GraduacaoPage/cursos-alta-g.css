@@ -1,0 +1,79 @@
+.cursos-alta-g {
+  background-color: #fdb913;
+}
+
+.cursos-alta-g h2 {
+  margin-bottom: 40px;
+  font-family: "apotek-comp", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  color: #ededed;
+}
+
+.cursos-alta-g ul {
+  margin: 0px;
+  padding: 0 20px 20px 20px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  justify-content: space-between;
+}
+
+.cursos-alta-g a {
+  display: block;
+  color: transparent;
+}
+
+.cursos-alta-g img {
+  margin-bottom: 0px;
+}
+
+.cursos-alta-g h2 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.cursos-alta-g h2::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: #ff7323;
+  transition: width 0.2s;
+}
+
+.cursos-alta-g a:hover h2::before {
+  width: 24px;
+}
+
+.cursos-alta-g li span {
+  padding-left: 20px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+.condicoes {
+  margin-top: 20px;
+  color: #ffffff;
+  margin-left: 90px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 801px) {
+  .cursos-alta-g {
+    padding-bottom: 30px;
+  }
+  .cursos-alta-g ul {
+    gap: 20px;
+  }
+}

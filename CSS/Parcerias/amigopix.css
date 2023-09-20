@@ -1,0 +1,62 @@
+.amigopix {
+  background-image: url("../../img/bg-amigopix.png");
+  background-color: white;
+}
+
+.intro-pix {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.intro-pix h1 {
+  margin-left: 0;
+}
+
+.intro-pix img {
+  max-width: 100vw;
+}
+
+.amigopix p {
+  margin: 50px 100px;
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #404040;
+  font-size: 32px;
+}
+
+.amigopix img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .amigopix .diagrama-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 801px) {
+  .amigopix .diagrama {
+    display: none;
+  }
+  .intro-pix {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .intro-pix img {
+    width: 63px;
+    height: 63px;
+  }
+  .intro-pix h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .amigopix p {
+    margin: 30px 30px;
+    font-size: 28px;
+  }
+}

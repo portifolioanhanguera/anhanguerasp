@@ -1,0 +1,122 @@
+.dominos {
+  background-image: url(../../img/bg-dominos.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex; /* Torna a seção um contêiner flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da tela */
+}
+
+.estudante-container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 13px;
+  /* Adicione margens superior e inferior para ajustar o espaçamento vertical */
+  margin: 20px auto; /* Define margens laterais automáticas para centralizar horizontalmente */
+}
+
+.estudante-container h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "apotek", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #16375c;
+  font-size: 32px;
+  width: 60%;
+}
+
+.estudante-container p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  font-size: 24px;
+}
+
+.estudante-container a {
+  text-decoration: underline;
+  color: #000000;
+  cursor: pointer;
+}
+
+.estudante-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.colaboradores {
+  background-color: #2e2e2e;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-logos {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin-bottom: 30px;
+  justify-items: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.colaboradores-container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 40px 20px;
+  padding-bottom: 0;
+  background-color: #ffffff;
+  border-radius: 13px;
+  /* Adicione margens superior e inferior para ajustar o espaçamento vertical */
+  margin: 20px auto; /* Define margens laterais automáticas para centralizar horizontalmente */
+}
+
+.colaboradores-container h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "apotek", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #16375c;
+  font-size: 32px;
+  width: 60%;
+}
+
+.colaboradores-container p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  font-size: 24px;
+}
+
+.condicoes-d {
+  text-align: end;
+}
+
+.estudante-container img,
+.colaboradores-container img {
+  max-width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+@media (max-width: 768px) {
+  /* Estilos para telas menores, como smartphones */
+  .estudante-container {
+    padding: 20px; /* Reduza o preenchimento para economizar espaço */
+  }
+  .estudante-container h2,
+  .colaboradores-container h2 {
+    width: 100%;
+    font-size: 20px;
+  }
+  .estudante-container p,
+  .colaboradores-container p {
+    font-size: 18px;
+  }
+}

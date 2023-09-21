@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
+    const data = document.querySelector("input[name=data]").value;
     const nome = document.querySelector("input[name=nome]").value;
     const telefone = document.querySelector("input[name=telefone]").value;
     const email = document.querySelector("input[name=email]").value;
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        data,
         nome,
         telefone,
         email,
@@ -235,6 +237,23 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// Função para obter a data atual no formato "dd/mm/yyyy"
+function getDataAtual() {
+  const data = new Date();
+  const dia = String(data.getDate()).padStart(2, "0");
+  const mes = String(data.getMonth() + 1).padStart(2, "0"); // Mês é base 0
+  const ano = data.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}
+
+// Preenche o campo "data" com a data atual quando a página carrega
+window.addEventListener("load", function () {
+  const campoData = document.getElementById("data");
+  if (campoData) {
+    campoData.value = getDataAtual();
+  }
 });
 
 // Alerta de página em construção

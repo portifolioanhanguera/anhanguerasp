@@ -1,0 +1,173 @@
+.acirc {
+  background-image: url(../../img/bg-acirc.png);
+  background-position: center center;
+  display: flex; /* Torna a seção um contêiner flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da tela */
+}
+
+.acirc-container img {
+  max-width: 100%;
+  margin-left: 40px;
+}
+
+.titulo-acirc {
+  font-size: 48px;
+  color: #fdb913;
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.acirc-container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background-color: rgba(22, 55, 92, 0.5);
+  border-radius: 13px;
+  /* Adicione margens superior e inferior para ajustar o espaçamento vertical */
+  margin: 30px auto; /* Define margens laterais automáticas para centralizar horizontalmente */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.acirc-container p {
+  font-size: 24px;
+  text-align: justify;
+  margin: 30px 80px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.acirc-container .acirc-intro {
+  list-style: disc;
+  font-size: 24px;
+  text-align: justify;
+  margin: 0 120px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.colum-acirc img {
+  max-width: 100%;
+  margin-left: 10px;
+}
+
+.logo-rc {
+  margin: 60px;
+}
+
+.colum-acirc h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 34px;
+  color: #ff7323;
+  margin-left: 50px;
+}
+
+.colum-acirc {
+  display: flex;
+}
+
+.img-cursos-rc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  row-gap: 130px;
+}
+
+.beneficios-acirc {
+  max-width: 30%; /* Defina a largura máxima desejada, por exemplo, 80% do contêiner pai */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.beneficios-acirc li {
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  color: #232323;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.beneficios-acirc li img {
+  max-width: 40%; /* Largura da imagem limitada a 40% do contêiner */
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  margin: 0 auto 10px; /* Centraliza a imagem horizontalmente e adiciona margem inferior */
+}
+
+.beneficios-acirc li p {
+  max-width: 40%; /* Largura do texto limitada a 40% do contêiner */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin: 0 auto; /* Centraliza o texto horizontalmente */
+  color: #232323;
+}
+
+@media (max-width: 801px) {
+  .acirc {
+    background-image: url(../../img/bg-acirc2.png);
+  }
+
+  .logo-rc {
+    width: 224px;
+    height: 43px;
+    margin: 20px;
+  }
+  .beneficios-acirc li img {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+  }
+  .beneficios-acirc li p {
+    max-width: fit-content;
+  }
+  .beneficios-acirc {
+    max-width: fit-content;
+  }
+  .img-cursos-rc {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    place-items: center;
+  }
+  .img-cursos-rc img {
+    width: 227px;
+    height: 227px;
+  }
+  .acirc-container {
+    margin-left: 0;
+  }
+  .titulo-acirc {
+    font-size: 28px;
+    color: #fdb913;
+    font-family: "apotek", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .acirc-container img {
+    margin-left: 0;
+  }
+  .acirc-container h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .acirc-container p {
+    font-size: 18px;
+    margin: 10px 10px;
+  }
+  .acirc-intro li {
+    font-size: 18px;
+    text-align: start;
+    margin: auto;
+  }
+  .colum-acirc {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .colum-acirc h2 {
+    margin: 20px auto;
+  }
+}

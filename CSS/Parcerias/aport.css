@@ -1,6 +1,5 @@
 .aport {
   background-image: url(../../img/bg-aport.png);
-  background-repeat: no-repeat;
   background-position: center center;
   display: flex; /* Torna a seção um contêiner flexível */
   justify-content: center; /* Centraliza horizontalmente */

@@ -22,6 +22,48 @@ h1 {
   text-align: start;
   margin-left: 80px;
 }
+.nao-visivel {
+  display: none;
+}
+
+.se-inscreva img {
+  width: 100%;
+}
+
+.se-inscreva {
+  background-color: #2e2e2e;
+  text-align: center;
+  position: relative;
+}
+
+div.setaBaixo {
+  width: 75px;
+  height: 60px;
+  background-image: url("../img/setaDown.png");
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 290px;
+  animation-name: setaBaixo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes setaBaixo {
+  0% {
+    top: 40px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.catalogo {
+  background-color: #2e2e2e;
+}
 
 .catalogo img {
   max-width: 100%;

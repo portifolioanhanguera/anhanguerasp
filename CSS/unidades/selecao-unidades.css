@@ -1,0 +1,155 @@
+main,
+body {
+  background-color: #ffffff;
+}
+
+.tabs {
+  background-image: url("../../img/bg-unidades.png");
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 100%;
+  min-height: 55px;
+  padding: 60px 60px;
+  padding-bottom: 180px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tabs li {
+  margin: 20px 20px 40px;
+}
+
+.tabs li a {
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 14px 34px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tabs li a:not(.inactive),
+.tabs li a:hover {
+  color: #ff7323; /* Cor desejada para o texto */
+  background: #ffffff; /* Fundo desejado enquanto estiver ativo ou hover */
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.5);
+}
+
+.inactive {
+  background: transparent !important;
+}
+
+.unidades-descricao-container {
+  width: 80%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+  margin-top: -180px;
+  margin-bottom: 80px;
+}
+
+.unidades-descricao-container h2 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: #404040;
+  margin: 0;
+}
+
+.unidades-descricao-container h3 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  color: #ff7323;
+  margin: 0;
+}
+
+.unidades-descricao-container ul {
+  display: flex;
+  gap: 50px;
+  margin: 40px;
+}
+
+.unidades-descricao-container ul a,
+.unidades-descricao-container ul p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 26px;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+.unidades-descricao-container ul li h4 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 26px;
+  color: #2e2e2e;
+  margin: 0;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .tabs {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+  .tabs li a {
+    font-size: 1.4rem;
+    padding: 14px;
+  }
+  .tabs li {
+    margin: 10px 10px 30px;
+  }
+  .unidades-descricao-container {
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding: 5px;
+    margin-top: -180px;
+    margin-bottom: 80px;
+  }
+  .unidades-descricao-container h2 {
+    font-size: 30px;
+  }
+  .unidades-descricao-container h3 {
+    font-size: 35px;
+  }
+  .unidades-descricao-container ul a,
+  .unidades-descricao-container ul p {
+    font-size: 20px;
+  }
+  .unidades-descricao-container ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

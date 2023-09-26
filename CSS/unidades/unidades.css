@@ -1,0 +1,52 @@
+.container-unidades {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-left: 120px;
+  margin-top: 0;
+  background: url("../../img/icon-detalhe.svg") no-repeat top right 200px;
+  background-color: #404040;
+  background-position-y: 30px;
+}
+
+.titulo-unidades p {
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #ff7323;
+  font-size: 38px;
+  width: 430px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.titulo-unidades h1 {
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: lowercase;
+  color: #ffffff;
+  font-size: 68px;
+  width: 40%;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .container-unidades {
+    padding-left: 20px;
+    margin-top: 0;
+    background: url("../../img/icon-detalhe.svg") no-repeat top right 30px;
+    background-color: #404040;
+    background-position-y: 30px;
+  }
+
+  .titulo-unidades p {
+    font-size: 28px;
+    width: 290px;
+  }
+  .titulo-unidades h1 {
+    font-size: 38px;
+    width: 80%;
+    margin-bottom: 0;
+  }
+}

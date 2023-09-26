@@ -20,6 +20,10 @@
 @import url("./PosPage/intropos.css");
 @import url("./PosPage/diferenciaspos.css");
 
+/* Estilos Unidades */
+@import url("./unidades/unidades.css");
+@import url("./unidades/selecao-unidades.css");
+
 /* Estilos Amigo e Professor Vale Pix */
 @import url("./Parcerias/amigopix.css");
 

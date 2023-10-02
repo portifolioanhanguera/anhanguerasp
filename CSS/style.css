@@ -24,6 +24,10 @@
 @import url("./unidades/unidades.css");
 @import url("./unidades/selecao-unidades.css");
 
+/* Estilos Infraestrutura */
+@import url("./Infraestrutura/infraestrutura.css");
+@import url("./Infraestrutura/corpo.css");
+
 /* Estilos Amigo e Professor Vale Pix */
 @import url("./Parcerias/amigopix.css");
 

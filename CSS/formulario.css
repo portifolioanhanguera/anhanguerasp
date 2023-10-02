@@ -180,6 +180,13 @@
   }
 }
 
+#mensagem {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ff7323;
+}
+
 @media (max-width: 800px) {
   .contato {
     grid-template-columns: 1fr;

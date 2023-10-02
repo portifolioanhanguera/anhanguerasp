@@ -58,7 +58,7 @@
 }
 
 .logo-rc {
-  margin: 60px;
+  margin: 20px;
 }
 
 .colum-acirc h2 {
@@ -78,7 +78,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  row-gap: 130px;
+  row-gap: 40px;
+}
+
+.img-cursos-rc img:last-child {
+  margin-left: 200px;
+}
+
+.beneficios-acirc li span {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .beneficios-acirc {

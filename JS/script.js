@@ -79,6 +79,10 @@ function menuOnClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
 
   const addloading = () => {
     button.innerHTML =
@@ -130,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(() => {
       removeloading();
       clearFields(); // Limpa os campos após o envio do formulário
+      showSuccessMessage();
     });
   };
 
@@ -291,44 +296,44 @@ window.addEventListener("load", function () {
   }
 });
 
-// Alerta de página em construção
+// // Alerta de página em construção
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".header-links a");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const links = document.querySelectorAll(".header-links a");
 
-  function mostrarAlerta(event) {
-    if (!event.target.classList.contains("excluir-alerta")) {
-      event.preventDefault();
-      alert("Desculpe o transtorno, essa página ainda está em construção");
-    }
-  }
+//   function mostrarAlerta(event) {
+//     if (!event.target.classList.contains("excluir-alerta")) {
+//       event.preventDefault();
+//       alert("Desculpe o transtorno, essa página ainda está em construção");
+//     }
+//   }
 
-  links.forEach((link) => {
-    link.addEventListener("click", mostrarAlerta);
-  });
-});
+//   links.forEach((link) => {
+//     link.addEventListener("click", mostrarAlerta);
+//   });
+// });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = document.querySelectorAll("#nav li");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const menuItems = document.querySelectorAll("#nav li");
 
-  function mostrarAlerta(event) {
-    const link = event.target;
+//   function mostrarAlerta(event) {
+//     const link = event.target;
 
-    if (link.tagName === "A") {
-      const href = link.getAttribute("href");
+//     if (link.tagName === "A") {
+//       const href = link.getAttribute("href");
 
-      if (href !== "./graduacao.html" && href !== "./index.html") {
-        event.preventDefault();
-        alert("Desculpe o transtorno, essa página ainda está em construção");
-      }
-    }
-  }
+//       if (href !== "./graduacao.html" && href !== "./index.html") {
+//         event.preventDefault();
+//         alert("Desculpe o transtorno, essa página ainda está em construção");
+//       }
+//     }
+//   }
 
-  menuItems.forEach((item) => {
-    const link = item.querySelector("a");
-    link.addEventListener("click", mostrarAlerta);
-  });
-});
+//   menuItems.forEach((item) => {
+//     const link = item.querySelector("a");
+//     link.addEventListener("click", mostrarAlerta);
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".footer-informacoes li a");

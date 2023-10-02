@@ -1,0 +1,76 @@
+.NPA {
+  display: flex;
+}
+
+.NPA img {
+  flex: 1; /* A imagem ocupará 50% da largura disponível */
+  max-width: 50%; /* Define uma largura máxima para a imagem */
+}
+
+.texto-corpo {
+  flex: 1; /* A div de texto ocupará o restante (50%) da largura disponível */
+  background-color: #ff8b48;
+  padding: 40px; /* Remova o padding */
+  margin: 0; /* Remova o margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.texto-corpo h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.texto-corpo p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.texto-corpo-direita {
+  flex: 1; /* A div de texto ocupará o restante (50%) da largura disponível */
+  background-color: #ffffff;
+  padding: 40px; /* Remova o padding */
+  margin: 0; /* Remova o margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.texto-corpo-direita h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ff7323;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.texto-corpo-direita p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #717171;
+  font-size: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 801px) {
+  .NPA {
+    flex-direction: column; /* Altera a direção da flexbox para empilhar em telas menores */
+  }
+  .NPA img {
+    max-width: 100%; /* A imagem deve ocupar 100% da largura em telas menores */
+    order: 2;
+  }
+}

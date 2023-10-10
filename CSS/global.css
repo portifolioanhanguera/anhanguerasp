@@ -86,6 +86,16 @@ div.setaBaixo {
   transform: scale(1.05); /* Aumenta a imagem em 5% */
 }
 
+.amai img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.amai {
+  margin: 0;
+  background-color: #ededed;
+}
+
 @media (min-width: 800px) {
   .botoes-catalogo-mobile {
     display: none;

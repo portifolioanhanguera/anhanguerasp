@@ -79,71 +79,6 @@ function menuOnClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
-  const showSuccessMessage = () => {
-    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
-    mensagem.style.display = "block";
-  };
-
-  const addloading = () => {
-    button.innerHTML =
-      '<img src="./img/loading_svgrepo.com.png" class="loading">';
-  };
-
-  const removeloading = () => {
-    button.innerHTML = "Inscreva-se";
-  };
-
-  const clearFields = () => {
-    document.querySelector("input[name=nome]").value = "";
-    document.querySelector("input[name=telefone]").value = "";
-    document.querySelector("input[name=email]").value = "";
-    document.querySelector("select[name=modalidade]").value = "";
-    document.querySelector("select[name=tipo]").value = "";
-    document.querySelector("input[name=curso]").value = "";
-    document.querySelector("select[name=polo]").value = "";
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addloading();
-    const data = document.querySelector("input[name=data]").value;
-    const nome = document.querySelector("input[name=nome]").value;
-    const telefone = document.querySelector("input[name=telefone]").value;
-    const email = document.querySelector("input[name=email]").value;
-    const modalidade = document.querySelector("select[name=modalidade]").value;
-    const tipo = document.querySelector("select[name=tipo]").value;
-    const curso = document.querySelector("input[name=curso]").value;
-    const polo = document.querySelector("select[name=polo]").value;
-
-    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        data,
-        nome,
-        telefone,
-        email,
-        modalidade,
-        tipo,
-        curso,
-        polo,
-      }),
-    }).then(() => {
-      removeloading();
-      clearFields(); // Limpa os campos após o envio do formulário
-      showSuccessMessage();
-    });
-  };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
-});
-
-// JS fomulario Amigo Vale Pix
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector(".botao-form");
 
   const addloading = () => {
     button.innerHTML =
@@ -161,40 +96,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=emailaluno]").value = "";
   };
 
-  const handleSubmit = (event) => {
+  document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
     addloading();
-    const parceria = document.querySelector("input[name=parceria]").value;
-    const nomealuno = document.querySelector("input[name=nomealuno]").value;
-    const ra = document.querySelector("input[name=ra]").value;
-    const telefonealuno = document.querySelector(
-      "input[name=telefonealuno]"
-    ).value;
-    const emailaluno = document.querySelector("input[name=emailaluno]").value;
-
-    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        parceria,
-        nomealuno,
-        ra,
-        telefonealuno,
-        emailaluno,
-      }),
-    }).then(() => {
+    setTimeout(() => {
       removeloading();
-      clearFields(); // Limpa os campos após o envio do formulário
-    });
-  };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
+      clearFields(); 
+    }, 2000); =
+  });
 });
 
-// JS fomulario Professor Vale Pix
+
+// JS fomulario Amigo Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
@@ -213,36 +126,39 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=emailprof]").value = "";
   };
 
-  const handleSubmit = (event) => {
+  document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
     addloading();
-    const parceria = document.querySelector("input[name=parceria]").value;
-    const nomeprof = document.querySelector("input[name=nomeprof]").value;
-    const telefoneprof = document.querySelector(
-      "input[name=telefoneprof]"
-    ).value;
-    const emailprof = document.querySelector("input[name=emailprof]").value;
-
-    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        parceria,
-        nomeprof,
-        telefoneprof,
-        emailprof,
-      }),
-    }).then(() => {
+    setTimeout(() => {
       removeloading();
-      clearFields(); // Limpa os campos após o envio do formulário
-    });
+      clearFields(); 
+    }, 2000); 
+  });
+});
+
+
+// JS fomulario Professor Vale Pix
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
   };
 
-  document.querySelector("form").addEventListener("submit", handleSubmit);
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    addloading();
+    setTimeout(() => {
+      removeloading();
+    }, 2000); 
+  });
 });
+
 
 // JS Formulario Domino's
 document.addEventListener("DOMContentLoaded", function () {
@@ -257,26 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.innerHTML = "Inscreva-se";
   };
 
-  const handleSubmit = (event) => {
+  document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
     addloading();
-    const parceria = document.querySelector("input[name=parceria]").value;
-
-    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        parceria,
-      }),
-    }).then(() => {
+    setTimeout(() => {
       removeloading();
-    });
-  };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
+    }, 2000); 
+  });
 });
 
 // Função para obter a data atual no formato "dd/mm/yyyy"

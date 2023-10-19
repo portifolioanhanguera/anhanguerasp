@@ -4,6 +4,7 @@
 @import url("./header.css");
 @import url("./formulario.css");
 @import url("./footer.css");
+@import url("./Termos/termosepolitica.css");
 
 /* Estilos Home */
 @import url("./HomePage/carrossel.css");
@@ -39,3 +40,9 @@
 
 /* Estilo acirc */
 @import url("./Parcerias/acirc.css");
+
+/* Estilo unegro */
+@import url("./Parcerias/unegro.css");
+
+/* Estilo Sobre Nós */
+@import url("./SobreNos/sobre.css");

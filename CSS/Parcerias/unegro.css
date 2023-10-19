@@ -1,0 +1,83 @@
+.titulo-unegro {
+  color: #ff7323;
+}
+
+.section-unegro {
+  background-image: url("../../img/bg_unegro.png");
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-unegro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-unegro {
+  display: flex;
+  align-items: start;
+  width: 70%;
+}
+
+.intro-unegro h1 {
+  margin-left: 10px;
+}
+
+.intro-unegro img {
+  max-width: 100vw;
+}
+
+.texto-unegro {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+  text-align: justify;
+  margin: 0 80px;
+  font-size: 24px;
+  line-height: 47px;
+  margin-bottom: 40px;
+}
+
+.unegro {
+  display: flex;
+}
+
+.column1 {
+  flex: 1 30%;
+}
+
+.column2 {
+  height: 250px;
+  width: 250px;
+  flex: 1 20%;
+}
+
+.lista-unegro li {
+  list-style: disc;
+}
+
+@media (max-width: 801px) {
+  .unegro {
+    flex-wrap: wrap;
+  }
+  .intro-unegro {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .texto-unegro {
+    font-size: 20px;
+    line-height: 29px;
+    margin: 20px 0;
+  }
+  .intro-unegro img {
+    width: 63px;
+    height: 63px;
+  }
+  .intro-unegro h1 {
+    font-size: 24px;
+  }
+}

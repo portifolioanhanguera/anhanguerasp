@@ -1,0 +1,61 @@
+.politica-termos {
+  margin: 50px 50px;
+  text-align: justify;
+}
+
+.politica-termos h1 {
+  margin-left: 0;
+}
+
+.politica-termos h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #2e2e2e;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.politica-termos p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+}
+
+.politica-termos li {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.politica-termos li h3 {
+  font-family: "apotek", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #2e2e2e;
+}
+
+.politica-termos .li-2 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+  margin-left: 60px;
+  list-style: circle;
+}
+
+.politica-termos .li-3 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #595959;
+  margin-left: 80px;
+  list-style: inside;
+}
+
+@media (max-width: 400px) {
+  .politica-termos {
+    margin: 10px 10px;
+  }
+}

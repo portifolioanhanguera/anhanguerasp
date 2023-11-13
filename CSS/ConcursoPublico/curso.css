@@ -1,0 +1,127 @@
+.curso-prefeitura {
+  padding: 40px;
+}
+
+.quadrado {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #325e75 50%, #ededed 50%);
+  border-radius: 15px;
+  display: flex;
+}
+
+.metade-esquerda,
+.metade-direita {
+  flex: 1;
+  padding: 15px;
+}
+
+.curso-prefeitura h1 {
+  color: #325e75;
+  font-size: 64px;
+}
+
+.botao-desconto {
+  background-color: #ededed;
+  color: #325e75;
+  border: none;
+  padding: 10px 20px;
+  font-size: 40px;
+  cursor: pointer;
+  font-family: "apotek", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  border-radius: 15px;
+  margin-top: 50px;
+  display: inline-block;
+  margin: 50px auto;
+}
+
+.valor-original {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 10px;
+}
+
+.titulo2-prefeitura {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 41px;
+}
+
+.p2-prefeitura {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  padding: 10px;
+  padding-top: 40px;
+}
+
+.lista-prefeitura {
+  list-style: disc;
+  padding-left: 30px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.sublista-prefeitura {
+  list-style: circle;
+  padding-left: 30px;
+}
+
+.metade-direita .titulo2-prefeitura {
+  color: #325e75;
+}
+
+.metade-direita .p2-prefeitura {
+  color: #325e75;
+}
+
+.metade-direita .lista-prefeitura {
+  color: #325e75;
+}
+
+.metade-direita .botao-desconto {
+  background-color: #325e75;
+  color: #ededed;
+}
+
+@media (max-width: 600px) {
+  .quadrado {
+    flex-direction: column;
+    background: linear-gradient(to bottom, #325e75 50%, #ededed 50%);
+  }
+
+  .metade-esquerda,
+  .metade-direita {
+    flex: 1;
+  }
+
+  .curso-prefeitura {
+    padding: 10px;
+  }
+  .curso-prefeitura h1 {
+    font-size: 34px;
+  }
+
+  .curso-prefeitura p {
+    font-size: 24px;
+  }
+
+  .botao-desconto {
+    font-size: 30px;
+  }
+  .titulo2-prefeitura {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+  .p2-prefeitura,
+  .lista-prefeitura,
+  .sublista-prefeitura {
+    font-size: 24px;
+  }
+}

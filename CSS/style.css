@@ -46,3 +46,19 @@
 
 /* Estilo Sobre Nós */
 @import url("./SobreNos/sobre.css");
+
+/* Estilo Unegro Afiliados */
+@import url("./UNEGRO/header.css");
+@import url("./UNEGRO/intro.css");
+@import url("./UNEGRO/sobre.css");
+@import url("./UNEGRO/proposito.css");
+@import url("./UNEGRO/forms.css");
+@import url("./UNEGRO/footer.css");
+
+/* Estilo Concurso Público Prefeitura */
+@import url("./ConcursoPublico/header.css");
+@import url("./ConcursoPublico/intro.css");
+@import url("./ConcursoPublico/curso.css");
+@import url("./ConcursoPublico/edital.css");
+@import url("./ConcursoPublico/forms.css");
+@import url("./ConcursoPublico/footer.css");

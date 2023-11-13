@@ -1,0 +1,80 @@
+.titulo1-unegro {
+  color: #ffffff;
+  font: 600 3rem/1.125 "Poppins", sans-serif;
+}
+
+.span-unegro {
+  color: #ffbb00;
+}
+
+.p-unegro {
+  color: #b2b2b2;
+  font: 400 1.5rem/1.5 "Roboto", sans-serif;
+}
+
+.introducao-bg-unegro {
+  background: #000000 url("../../img/dec/bottom-left.svg") no-repeat bottom
+    160px left 120px;
+  box-shadow: inset 0 -120px #ffffff;
+}
+
+.introducao-unegro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+}
+
+.introducao-conteudo-unegro {
+  align-self: end;
+  padding-bottom: 200px;
+}
+
+.introducao-unegro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.introducao-unegro h1 {
+  margin-bottom: 32px;
+}
+
+.introducao-unegro p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .introducao-bg-unegro {
+    background: #111111;
+    padding-top: 40px;
+    box-shadow: inset 0 -60px #ffffff;
+  }
+  .introducao-unegro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .introducao-conteudo-unegro {
+    padding-bottom: 0px;
+  }
+  .introducao-unegro h1 {
+    margin-bottom: 16px;
+  }
+  .introducao-unegro img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 401px) {
+  .introducao-unegro img {
+    display: none;
+  }
+  .titulo1-unegro {
+    font-size: 2.5rem;
+  }
+  .p-unegro {
+    color: #b2b2b2;
+    font: 400 1.3rem/1.5 "Roboto", sans-serif;
+  }
+}

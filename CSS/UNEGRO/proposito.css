@@ -1,0 +1,112 @@
+h6 {
+  font-size: 40px;
+  font-family: "poppins";
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+}
+.proposito-conteudo h2 {
+  color: #ffffff;
+  font: 600 3rem/1.125 "Poppins", sans-serif;
+}
+
+.proposito-bg {
+  background-color: #111111;
+  box-shadow: inset 0 80px #ffffff, inset 0 -80px #ffffff;
+}
+
+.proposito-vantagens div {
+  clear: both;
+}
+
+.proposito-vantagens img {
+  float: left;
+  margin-right: 10px;
+}
+
+.proposito {
+  display: flex;
+  gap: 40px;
+  margin: 0 80px;
+}
+
+.proposito-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.proposito-conteudo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.proposito-conteudo > span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.proposito-conteudo h2 {
+  margin-bottom: 32px;
+}
+
+.proposito-conteudo > p {
+  margin-bottom: 20px;
+}
+
+.proposito-vantagens {
+  gap: 40px;
+}
+
+.proposito-vantagens img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+.proposito-vantagens ul {
+  color: #b2b2b2;
+  font-size: 22px;
+  text-align: justify;
+  margin: 40px 90px;
+  margin-top: 0;
+  list-style: disc;
+}
+
+@media (max-width: 800px) {
+  .proposito-bg {
+    box-shadow: initial;
+  }
+  .proposito {
+    grid-template-columns: 1fr;
+  }
+  .proposito-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .proposito-imagem {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .proposito-vantagens {
+    flex-direction: column;
+  }
+  .proposito-conteudo {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .proposito-conteudo h2 {
+    font: 600 2.5rem/1.125 "Poppins", sans-serif;
+  }
+  .proposito-vantagens ul {
+    font-size: 20px;
+    text-align: start;
+    margin: 20px 40px;
+  }
+  .proposito {
+    box-shadow: none;
+    margin: 0px 10px;
+  }
+}

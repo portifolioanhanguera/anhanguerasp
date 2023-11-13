@@ -74,9 +74,141 @@ function menuOnClick() {
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
+// JS Formulário Padrão
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+  const mensagem = document.getElementById("mensagem");
 
-// JS formulário
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
 
+  const addLoading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeLoading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=nome]").value = "";
+    document.querySelector("input[name=telefone]").value = "";
+    document.querySelector("input[name=email]").value = "";
+    document.querySelector("select[name=modalidade]").value = "";
+    document.querySelector("select[name=tipo]").value = "";
+    document.querySelector("select[name=curso-graduacao]").value = "";
+    document.querySelector("select[name=curso-tecnicos]").value = "";
+    document.querySelector("input[name=curso-manual]").value = "";
+    document.querySelector("select[name=polo]").value = "";
+  };
+
+  const handleTipoCursoChange = () => {
+    const tipoCursoSelect = document.querySelector('select[name="tipo"]');
+    const cursoContainer = document.getElementById("curso-container");
+    const cursoGraduacaoSelect = document.querySelector(
+      'select[name="curso-graduacao"]'
+    );
+    const cursoTecnicosSelect = document.querySelector(
+      'select[name="curso-tecnicos"]'
+    );
+    const cursoManualInput = document.querySelector(
+      'input[name="curso-manual"]'
+    );
+
+    tipoCursoSelect.addEventListener("change", function () {
+      const selectedOption = tipoCursoSelect.value;
+
+      if (selectedOption === "Graduação") {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "block";
+        cursoTecnicosSelect.style.display = "none";
+        cursoManualInput.style.display = "none";
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+        cursoGraduacaoSelect.setAttribute("required", "required"); // Adicionar required
+      } else if (selectedOption === "Cursos Técnicos") {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "none";
+        cursoTecnicosSelect.style.display = "block";
+        cursoManualInput.style.display = "none";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.setAttribute("required", "required"); // Adicionar required
+      } else if (
+        selectedOption === "Cursos Livres" ||
+        selectedOption === "Pós-graduação"
+      ) {
+        cursoContainer.style.display = "block";
+        cursoGraduacaoSelect.style.display = "none";
+        cursoTecnicosSelect.style.display = "none";
+        cursoManualInput.style.display = "block";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+      } else {
+        cursoContainer.style.display = "none";
+        cursoGraduacaoSelect.value = "";
+        cursoTecnicosSelect.value = "";
+        cursoManualInput.value = "";
+        cursoGraduacaoSelect.removeAttribute("required"); // Remover atributo required
+        cursoTecnicosSelect.removeAttribute("required"); // Remover atributo required
+      }
+    });
+  };
+
+  handleTipoCursoChange();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addLoading();
+    const data = document.querySelector("input[name=data]").value;
+    const nome = document.querySelector("input[name=nome]").value;
+    const telefone = document.querySelector("input[name=telefone]").value;
+    const email = document.querySelector("input[name=email]").value;
+    const modalidade = document.querySelector("select[name=modalidade]").value;
+    const tipo = document.querySelector("select[name=tipo]").value;
+    const cursoGraduacao = document.querySelector(
+      "select[name=curso-graduacao]"
+    ).value;
+    const cursoTecnicos = document.querySelector(
+      "select[name=curso-tecnicos]"
+    ).value;
+    const cursoManualInput = document.querySelector("input[name=curso-manual]");
+    const curso =
+      tipo === "Graduação"
+        ? cursoGraduacao
+        : tipo === "Cursos Técnicos"
+        ? cursoTecnicos
+        : cursoManualInput.value;
+    const polo = document.querySelector("select[name=polo]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data,
+        nome,
+        telefone,
+        email,
+        modalidade,
+        tipo,
+        curso,
+        polo,
+      }),
+    }).then(() => {
+      removeLoading();
+      clearFields();
+      showSuccessMessage();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS fomulario Amigo Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
@@ -96,18 +228,40 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=emailaluno]").value = "";
   };
 
-  document.querySelector("form").addEventListener("submit", (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    setTimeout(() => {
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomealuno = document.querySelector("input[name=nomealuno]").value;
+    const ra = document.querySelector("input[name=ra]").value;
+    const telefonealuno = document.querySelector(
+      "input[name=telefonealuno]"
+    ).value;
+    const emailaluno = document.querySelector("input[name=emailaluno]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomealuno,
+        ra,
+        telefonealuno,
+        emailaluno,
+      }),
+    }).then(() => {
       removeloading();
-      clearFields(); 
-    }, 2000); =
-  });
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
-
-// JS fomulario Amigo Vale Pix
+// JS fomulario Professor Vale Pix
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector(".botao-form");
 
@@ -126,39 +280,36 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("input[name=emailprof]").value = "";
   };
 
-  document.querySelector("form").addEventListener("submit", (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    setTimeout(() => {
+    const parceria = document.querySelector("input[name=parceria]").value;
+    const nomeprof = document.querySelector("input[name=nomeprof]").value;
+    const telefoneprof = document.querySelector(
+      "input[name=telefoneprof]"
+    ).value;
+    const emailprof = document.querySelector("input[name=emailprof]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+        nomeprof,
+        telefoneprof,
+        emailprof,
+      }),
+    }).then(() => {
       removeloading();
-      clearFields(); 
-    }, 2000); 
-  });
-});
-
-
-// JS fomulario Professor Vale Pix
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector(".botao-form");
-
-  const addloading = () => {
-    button.innerHTML =
-      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+      clearFields(); // Limpa os campos após o envio do formulário
+    });
   };
 
-  const removeloading = () => {
-    button.innerHTML = "Inscreva-se";
-  };
-
-  document.querySelector("form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    addloading();
-    setTimeout(() => {
-      removeloading();
-    }, 2000); 
-  });
+  document.querySelector("form").addEventListener("submit", handleSubmit);
 });
-
 
 // JS Formulario Domino's
 document.addEventListener("DOMContentLoaded", function () {
@@ -173,13 +324,26 @@ document.addEventListener("DOMContentLoaded", function () {
     button.innerHTML = "Inscreva-se";
   };
 
-  document.querySelector("form").addEventListener("submit", (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     addloading();
-    setTimeout(() => {
+    const parceria = document.querySelector("input[name=parceria]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parceria,
+      }),
+    }).then(() => {
       removeloading();
-    }, 2000); 
-  });
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
 });
 
 // Função para obter a data atual no formato "dd/mm/yyyy"
@@ -238,20 +402,20 @@ window.addEventListener("load", function () {
 //   });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".footer-informacoes li a");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const links = document.querySelectorAll(".footer-informacoes li a");
 
-  function mostrarAlerta(event) {
-    if (!event.target.classList.contains("excluir-alerta")) {
-      event.preventDefault();
-      alert("Desculpe o transtorno, essa página ainda está em construção");
-    }
-  }
+//   function mostrarAlerta(event) {
+//     if (!event.target.classList.contains("excluir-alerta")) {
+//       event.preventDefault();
+//       alert("Desculpe o transtorno, essa página ainda está em construção");
+//     }
+//   }
 
-  links.forEach((link) => {
-    link.addEventListener("click", mostrarAlerta);
-  });
-});
+//   links.forEach((link) => {
+//     link.addEventListener("click", mostrarAlerta);
+//   });
+// });
 
 // Unidades JS
 
@@ -943,3 +1107,195 @@ function scrollDown() {
     behavior: "smooth", // Essa opção faz a rolagem ser suave
   });
 }
+
+// JS formulário Unegro - afiliados
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=data]").value = "";
+    document.querySelector("input[name=NomeAfiliado]").value = "";
+    document.querySelector("input[name=CEP]").value = "";
+    document.querySelector("input[name=endereco]").value = "";
+    document.querySelector("input[name=numero]").value = "";
+    document.querySelector("input[name=complemento]").value = "";
+    document.querySelector("input[name=bairro]").value = "";
+    document.querySelector("input[name=cidade]").value = "";
+    document.querySelector("input[name=uf]").value = "";
+    document.querySelector("input[name=residencial]").value = "";
+    document.querySelector("input[name=comercial]").value = "";
+    document.querySelector("input[name=celular]").value = "";
+    document.querySelector("input[name=nascimento]").value = "";
+    document.querySelector("input[name=rg]").value = "";
+    document.querySelector("input[name=cpf]").value = "";
+    document.querySelector("select[name=sexo]").value = "";
+    document.querySelector("input[name=emailafiliado]").value = "";
+    document.querySelector("input[name=municipio]").value = "";
+    document.querySelector("input[name=ufm]").value = "";
+    document.querySelector("select[name=escolaridade]").value = "";
+    document.querySelector("input[name=ocupacao]").value = "";
+    document.querySelector("select[name=movimento]").value = "";
+    document.querySelector("input[name=valor]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const data = document.querySelector("input[name=data]").value;
+    const NomeAfiliado = document.querySelector(
+      "input[name=NomeAfiliado]"
+    ).value;
+    const CEP = document.querySelector("input[name=CEP]").value;
+    const endereco = document.querySelector("input[name=endereco]").value;
+    const numero = document.querySelector("input[name=numero]").value;
+    const complemento = document.querySelector("input[name=complemento]").value;
+    const bairro = document.querySelector("input[name=bairro]").value;
+    const cidade = document.querySelector("input[name=cidade]").value;
+    const uf = document.querySelector("input[name=uf]").value;
+    const residencial = document.querySelector("input[name=residencial]").value;
+    const comercial = document.querySelector("input[name=comercial]").value;
+    const celular = document.querySelector("input[name=celular]").value;
+    const nascimento = document.querySelector("input[name=nascimento]").value;
+    const rg = document.querySelector("input[name=rg]").value;
+    const cpf = document.querySelector("input[name=cpf]").value;
+    const sexo = document.querySelector("select[name=sexo]").value;
+    const emailafiliado = document.querySelector(
+      "input[name=emailafiliado]"
+    ).value;
+    const municipio = document.querySelector("input[name=municipio]").value;
+    const ufm = document.querySelector("input[name=ufm]").value;
+    const escolaridade = document.querySelector(
+      "select[name=escolaridade]"
+    ).value;
+    const ocupacao = document.querySelector("input[name=ocupacao]").value;
+    const movimento = document.querySelector("select[name=movimento]").value;
+    const valor = document.querySelector("input[name=valor]").value;
+
+    fetch("https://api.sheetmonkey.io/form/uyvgqX1ZoBoyAcF56h2ygN", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data,
+        NomeAfiliado,
+        CEP,
+        endereco,
+        numero,
+        complemento,
+        bairro,
+        cidade,
+        uf,
+        residencial,
+        comercial,
+        celular,
+        nascimento,
+        rg,
+        cpf,
+        sexo,
+        emailafiliado,
+        municipio,
+        ufm,
+        escolaridade,
+        ocupacao,
+        movimento,
+        valor,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields(); // Limpa os campos após o envio do formulário
+      showSuccessMessage();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});
+
+// JS formulário  Concurso Público
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".botao-form");
+  const showSuccessMessage = () => {
+    mensagem.innerText = "Formulário enviado! Obrigado por sua inscrição!";
+    mensagem.style.display = "block";
+  };
+
+  const addloading = () => {
+    button.innerHTML =
+      '<img src="./img/loading_svgrepo.com.png" class="loading">';
+  };
+
+  const removeloading = () => {
+    button.innerHTML = "Inscreva-se";
+  };
+
+  const clearFields = () => {
+    document.querySelector("input[name=data]").value = "";
+    document.querySelector("input[name=nomeconcurso]").value = "";
+    document.querySelector("input[name=telefoneconcurso]").value = "";
+    document.querySelector("input[name=emailconcurso]").value = "";
+    document.querySelector("select[name=cursoconcurso]").value = "";
+    document.querySelector("select[name=datacurso]").value = "";
+    document.querySelector("select[name=localconcurso]").value = "";
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addloading();
+    const data = document.querySelector("input[name=data]").value;
+    const nomeconcurso = document.querySelector(
+      "input[name=nomeconcurso]"
+    ).value;
+    const telefoneconcurso = document.querySelector(
+      "input[name=telefoneconcurso]"
+    ).value;
+    const emailconcurso = document.querySelector(
+      "input[name=emailconcurso]"
+    ).value;
+    const cursoconcurso = document.querySelector(
+      "select[name=cursoconcurso]"
+    ).value;
+    const datacurso = document.querySelector("select[name=datacurso]").value;
+    const localconcurso = document.querySelector(
+      "select[name=localconcurso]"
+    ).value;
+
+    fetch("https://api.sheetmonkey.io/form/2fVEfg6Aed4GxgANxLppGS", {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data,
+        nomeconcurso,
+        telefoneconcurso,
+        emailconcurso,
+        cursoconcurso,
+        datacurso,
+        localconcurso,
+      }),
+    }).then(() => {
+      removeloading();
+      clearFields();
+      showSuccessMessage();
+    });
+  };
+
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+});

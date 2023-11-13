@@ -1,0 +1,161 @@
+body {
+  margin: 0px;
+  color: #ffffff;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100vh;
+  height: auto;
+  display: block;
+}
+
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+
+.container-prefeitura {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  display: inline-block;
+  color: #ffbb00;
+  font: 500 1.5rem/1.5 "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.botao:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+@media (max-width: 600px) {
+  .botao-prefeitura {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+.header-bg-prefeitura {
+  background-color: #325e75;
+}
+
+.header-prefeitura {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-menu-prefeitura {
+  font-size: 22px;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header-menu-prefeitura a {
+  padding: 16px 0px;
+  display: inline-block;
+  position: relative;
+}
+
+.header-menu-prefeitura a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #ffffff;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu-prefeitura a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header-menu-prefeitura {
+    gap: 20px;
+  }
+
+  .header-menu-prefeitura a {
+    background: var(--cor-11);
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  .header-menu-prefeitura a:hover {
+    background-color: var(--cor-10);
+  }
+
+  .header-prefeitura a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu-prefeitura {
+    gap: 0px;
+  }
+
+  .header-menu-prefeitura a {
+    padding: 8px 5px;
+    font-size: 18px;
+  }
+  .header-prefeitura {
+    text-align: center;
+  }
+  .header-prefeitura img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+}

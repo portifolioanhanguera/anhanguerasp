@@ -1,0 +1,111 @@
+.titulo2-unegro {
+  color: #000000;
+}
+
+.p2-unegro {
+  font-size: 28px;
+  text-align: justify;
+  margin: 40px 90px;
+  margin-top: 0;
+  color: #595959;
+}
+
+.presidente h4 {
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+}
+
+.presidente h5 {
+  margin-top: 0;
+  font: 600 1rem "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.presidente ul {
+  flex-direction: column;
+  list-style: disc;
+}
+
+.historia {
+  display: flex;
+  justify-content: space-between;
+}
+
+.historia h2 {
+  margin-bottom: 20px;
+  margin-left: 70px;
+  font: 600 3rem/1.125 "Poppins", sans-serif;
+}
+
+.sobre-lista {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.sobre-lista h2 {
+  margin-bottom: 20px;
+  font: 600 3rem/1.125 "Poppins", sans-serif;
+}
+
+#sobre .sobre-lista ul {
+  padding: 0px 0px 20px 0px;
+}
+
+.sobre-lista li {
+  min-width: 280px;
+}
+
+.sobre-lista img {
+  margin-bottom: 16px;
+}
+
+.sobre-lista h3 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.sobre-lista h3::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: #ffbb00;
+  transition: width 0.2s;
+}
+
+.sobre-lista a:hover h3::before {
+  width: 24px;
+}
+
+.sobre-lista li span {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .sobre-lista {
+    padding-bottom: 60px;
+  }
+  .sobre-lista ul {
+    gap: 20px;
+  }
+  .historia {
+    flex-wrap: wrap;
+  }
+  .p2-unegro {
+    font-size: 20px;
+    margin: 20px 20px;
+  }
+  .sobre-lista {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .historia h2 {
+    margin-bottom: 20px;
+    margin-left: 0;
+    font: 600 2.5rem/1.125 "Poppins", sans-serif;
+  }
+  .sobre-lista h2 {
+    font: 600 2.5rem/1.125 "Poppins", sans-serif;
+  }
+}

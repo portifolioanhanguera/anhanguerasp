@@ -1,0 +1,27 @@
+.footer-unegro {
+  background-color: #111111;
+  text-align: center; /* Centraliza o texto dentro do elemento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-redes {
+  margin: 40px 0;
+}
+
+.footer-unegro p {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  .footer-unegro img {
+    width: 200px;
+  }
+  .footer-redes img {
+    width: 40px;
+  }
+}

@@ -1,0 +1,210 @@
+.container-forms-prefeitura {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+.matricule-se-container-prefeitura {
+  grid-column: span 2;
+}
+
+.matricule-se-container-prefeitura h1 {
+  color: #325e75;
+  font-family: "apotek", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 40px;
+}
+
+.contato-prefeitura {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+
+.contato-dados-prefeitura h2 {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.contato-dados-prefeitura p {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.contato-dados-prefeitura,
+.contato-formulario-prefeitura {
+  padding: 60px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contato-dados-prefeitura {
+  border-radius: 13px 0 0 13px;
+  background: #325e75;
+}
+
+.contato-formulario-prefeitura {
+  border-radius: 0 13px 13px 0;
+  background: #ffffff;
+}
+
+.contato-redes-prefeitura {
+  display: flex;
+  gap: 32px;
+  padding-left: 28px;
+}
+
+.contato-formulario-prefeitura .col-1 {
+  grid-column: span 2;
+}
+
+.form-prefeitura {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-prefeitura label {
+  display: block;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.form-prefeitura .col-2 {
+  grid-column: span 2;
+}
+
+.form-prefeitura .col-2 select,
+.form-prefeitura input[type="text"],
+.form-prefeitura input[type="email"],
+.form-prefeitura input[type="tel"],
+.form-prefeitura textarea {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #f7f7f7;
+  border: 1px solid #cccccc;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-prefeitura input[type="text"]:focus,
+.form-prefeitura input[type="email"]:focus,
+.form-prefeitura input[type="tel"]:focus,
+.form-prefeitura textarea:focus,
+.form-prefeitura .col-2 select:focus {
+  outline: none;
+  border-color: #ff7323;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #fdc7a8;
+}
+
+.botao-form {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #325e75;
+  border-radius: 14px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+.botao-form:hover {
+  background: #cccccc;
+}
+
+.loading {
+  width: 35px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#mensagem {
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ff7323;
+}
+
+@media (max-width: 800px) {
+  .contato-prefeitura {
+    grid-template-columns: 1fr;
+  }
+  .matricule-se-container-prefeitura {
+    grid-column: initial;
+  }
+  .contato-dados-prefeitura,
+  .contato-formulario-prefeitura {
+    padding: 20px;
+  }
+  .contato-dados-prefeitura {
+    border-radius: 13px 13px 0 0;
+  }
+  .contato-formulario-prefeitura {
+    border-radius: 0 0 13px 13px;
+  }
+  .contato-dados-prefeitura h2,
+  .contato-meios-prefeitura a:nth-child(2) {
+    margin-bottom: 32px;
+  }
+  .contato-redes-prefeitura {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .botao-form-prefeitura {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  .container-forms-prefeitura .form-prefeitura {
+    grid-template-columns: 1fr;
+  }
+  .form-prefeitura .col-2,
+  .contato-formulario-prefeitura .col-1 {
+    grid-column: 1;
+  }
+  .matricule-se-container-prefeitura h1 {
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  .contato-dados-prefeitura p {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .contato-dados-prefeitura h2 {
+    font-size: 20px;
+  }
+  .contato-dados-prefeitura a {
+    font-size: 16px;
+  }
+}

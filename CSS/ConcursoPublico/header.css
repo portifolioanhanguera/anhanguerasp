@@ -26,15 +26,7 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100vh;
-  height: auto;
-  display: block;
-}
 
-img[src$=".jpg"] {
-  border-radius: 4px;
-}
 
 .container-prefeitura {
   box-sizing: border-box;

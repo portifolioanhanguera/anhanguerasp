@@ -1,64 +1,64 @@
 /* Estilos globais */
-@import url("./global.css");
-@import url("./pre-header.css");
-@import url("./header.css");
-@import url("./formulario.css");
-@import url("./footer.css");
-@import url("./Termos/termosepolitica.css");
+@import url("/global.css");
+@import url("/pre-header.css");
+@import url("/header.css");
+@import url("/formulariocss");
+@import url("/footer.css");
+@import url("/Termos/termosepolitica.css");
 
 /* Estilos Home */
-@import url("./HomePage/carrossel.css");
-@import url("./HomePage/especialidades.css");
-@import url("./HomePage/cursos-em-alta.css");
-@import url("./HomePage/diferenciais.css");
+@import url("/HomePage/carrossel.css");
+@import url("/HomePage/especialidades.css");
+@import url("/HomePage/cursos-em-alta.css");
+@import url("/HomePage/diferenciais.css");
 
 /* Estidos Graduação */
-@import url("./GraduacaoPage/gintro.css");
-@import url("./GraduacaoPage/cursos-alta-g.css");
-@import url("./GraduacaoPage/forms-g.css");
+@import url("/GraduacaoPage/gintro.css");
+@import url("/GraduacaoPage/cursos-alta-g.css");
+@import url("/GraduacaoPage/forms-g.css");
 
 /* Estilos Pós Graduação */
-@import url("./PosPage/intropos.css");
-@import url("./PosPage/diferenciaspos.css");
+@import url("/PosPage/intropos.css");
+@import url("/PosPage/diferenciaspos.css");
 
 /* Estilos Unidades */
-@import url("./unidades/unidades.css");
-@import url("./unidades/selecao-unidades.css");
+@import url("/unidades/unidades.css");
+@import url("/unidades/selecao-unidades.css");
 
 /* Estilos Infraestrutura */
-@import url("./Infraestrutura/infraestrutura.css");
-@import url("./Infraestrutura/corpo.css");
+@import url("/Infraestrutura/infraestrutura.css");
+@import url("/Infraestrutura/corpo.css");
 
 /* Estilos Amigo e Professor Vale Pix */
-@import url("./Parcerias/amigopix.css");
+@import url("/Parcerias/amigopix.css");
 
 /* Estilo Domino's */
-@import url("./Parcerias/dominos.css");
+@import url("/Parcerias/dominos.css");
 
 /* Estilo Aport */
-@import url("./Parcerias/aport.css");
+@import url("/Parcerias/aport.css");
 
 /* Estilo acirc */
-@import url("./Parcerias/acirc.css");
+@import url("/Parcerias/acirc.css");
 
 /* Estilo unegro */
-@import url("./Parcerias/unegro.css");
+@import url("/Parcerias/unegro.css");
 
 /* Estilo Sobre Nós */
-@import url("./SobreNos/sobre.css");
+@import url("/SobreNos/sobre.css");
 
 /* Estilo Unegro Afiliados */
-@import url("./UNEGRO/header.css");
-@import url("./UNEGRO/intro.css");
-@import url("./UNEGRO/sobre.css");
-@import url("./UNEGRO/proposito.css");
-@import url("./UNEGRO/forms.css");
-@import url("./UNEGRO/footer.css");
+@import url("/UNEGRO/header.css");
+@import url("/UNEGRO/intro.css");
+@import url("/UNEGRO/sobre.css");
+@import url("/UNEGRO/proposito.css");
+@import url("/UNEGRO/forms.css");
+@import url("/UNEGRO/footer.css");
 
 /* Estilo Concurso Público Prefeitura */
-@import url("./ConcursoPublico/header.css");
-@import url("./ConcursoPublico/intro.css");
-@import url("./ConcursoPublico/curso.css");
-@import url("./ConcursoPublico/edital.css");
-@import url("./ConcursoPublico/forms.css");
-@import url("./ConcursoPublico/footer.css");
+@import url("/ConcursoPublico/header.css");
+@import url("/ConcursoPublico/intro.css");
+@import url("/ConcursoPublico/curso.css");
+@import url("/ConcursoPublico/edital.css");
+@import url("/ConcursoPublico/forms.css");
+@import url("/ConcursoPublico/footer.css");

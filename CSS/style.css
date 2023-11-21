@@ -2,7 +2,7 @@
 @import url("./global.css");
 @import url("./pre-header.css");
 @import url("./header.css");
-@import url("./formulariocss");
+@import url("./formulario.css");
 @import url("./footer.css");
 @import url("./Termos/termosepolitica.css");
 
@@ -15,11 +15,10 @@
 /* Estidos Graduação */
 @import url("./GraduacaoPage/gintro.css");
 @import url("./GraduacaoPage/cursos-alta-g.css");
-@import url("./GraduacaoPage/forms-g.css");
 
 /* Estilos Pós Graduação */
 @import url("./PosPage/intropos.css");
-@import url("./PosPage/diferenciaspos.css");
+
 
 /* Estilos Unidades */
 @import url("./unidades/unidades.css");
